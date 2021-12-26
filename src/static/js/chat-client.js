@@ -108,7 +108,7 @@ function addUsersToList(connectedUsers) {
     ul.innerHTML = connectedUsers
         .map(({ pseudo, id, color }) => {
             let frontColor = calcLuminance(color) > 40 ? '#000000' : '#ffffff';
-            return `<li><span style="background-color: ${color}; color: ${frontColor}">${pseudo}</span></li>`
+            return `<li><span style="color: ${color}">${pseudo}</span></li>`
         })
         .join('');
 }
@@ -126,7 +126,7 @@ function showMessage({ date, pseudo, message, color }) {
 
     let messageHtml = `<div class="message">
         <span class="msg-date">${new Date(date).toLocaleString()}</span>
-        <span class="msg-user" style="background-color: ${color}; color: ${frontColor}">${pseudo}</span>
+        <span class="msg-user"color: ${color}">${pseudo}</span>
         <span class="msg-message">${message}</span>
     </div>`;
 
