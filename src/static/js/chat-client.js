@@ -126,7 +126,7 @@ function showMessage({ date, pseudo, message, color }) {
 
     let messageHtml = `<div class="message">
         <span class="msg-date">${new Date(date).toLocaleString()}</span>
-        <span class="msg-user"color: ${color}">${pseudo}</span>
+        <span class="msg-user"style="color: ${color}">${pseudo}</span>
         <span class="msg-message">${message}</span>
     </div>`;
 
